@@ -73,6 +73,12 @@ button, input, a {
 section {
 	padding: 10rem 0;
 }
+.section-header {
+	text-align: center;
+	margin: 3.6rem 0 10rem;
+	.bold();
+	font-size: center;
+}
 
 /* Main  */
 .main {
@@ -83,6 +89,7 @@ section {
 		margin-top: 10rem;
 		/* главный заголовок */
 		h1 {
+			word-wrap: break-word;
 			margin-top: 0;
 			margin-bottom: 4rem;
 			.bold();
@@ -190,7 +197,54 @@ section {
 	color: @text;
 }
 }
+/* оформление секции с преимущестави */
+.features {
+	&-block {
+		text-align: center;
+		h3 {
+			.bold();
+			font-size: 2rem;
+			margin-bottom: 3rem;
+		}
+		p {
+			display: inline-block;
+			width: 80%;
+			font-size: 1.4rem;
+		}
+	}
 
+	&-img {
+		height: 8rem;
+		margin-bottom: 3rem;
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+.slick-active {
+	outline: none;
+}
+.arrow {
+	top: 50%;
+	transform: translateY(-50%);
+	position: absolute;
+	z-index: 99;
+	width: 2rem;
+	height: 2rem;
+	border: none;
+}
+.prev {
+	left: 0;
+	background: url(../img/features/left-arrow.svg) center no-repeat;
+	background-size: 70%;
+}
+.next {
+	right: 0;
+	background: url(../img/features/right-arrow.svg) center no-repeat;
+	background-size: 70%;
+}
+	
 @media (max-width: 991px) {
 	.main {
 		background-position: top right;
